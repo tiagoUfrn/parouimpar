@@ -46,7 +46,6 @@ JOGADOR 1 escolhe as opções "pedra" "papel" ou "tesoura".
 ===============================================================
  */
 
-//PASSO 1! **
 var contador1=0, contador2=0;
 var parimpar = prompt("escolha par ou impar: "); // variavel que recebe uma palavra para comparar
 //PASSO 2! 
@@ -63,11 +62,10 @@ resultado = (jogador1 + jogador2)%2; // variavel que guarda resultado de jogador
 if(resultado % 2 === 0){ // compara se o numero do jogador 1 é par
     if(parimpar === "par"){ // se for par a condição é verdadeira
       contador1++; 
-      
       alert("Jogador 1 venceu no par ou impar"); // imprime o alerta com o resultado do jogador1 vencedor e encerra o programa ou
+    
     }else{ // se a condição for falsa e o número for impar pula para a linha de baixo
         contador2++;
-       
         alert("Jogador 2 venceu no par ou impar"); // imprime o resultado impar com o vencedor sendo o jogador 2 
     }
 }else{ // caso contrário 
@@ -77,50 +75,56 @@ if(resultado % 2 === 0){ // compara se o numero do jogador 1 é par
         alert("Jogador 1 venceu no par ou impar"); // imprime o resultado com o vencedor
     }else{ // caso contrário
         contador2++;
-        
         alert("Jogador 2 venceu no par ou impar"); // o vencedor venceu pois a soma deu um numero par.
     }
+    
 }
+
 
 esco2 = ["pedra","papel","tesoura"];
 
-if(esco2 = true){
+if(esco2){
     if ((j1 ==="pedra") && (j2 ==="pedra")){ // jogador 1 escolhe pedra
+    contador1++;
+    contador2++;
     alert("\nEmpate no papel, pedra ou tesoura");   
  } else if ((j1 ==="papel") && (j2 ==="papel")){  // jogador 1 escolhe papel
- 
-    alert("\nEmpate no papel, pedra ou tesoura");   
+    contador1++;
+	contador2++;    
+	alert("\nEmpate no papel, pedra ou tesoura");   
  } else if ((j1 ==="tesoura") && (j2 ==="tesoura")){ // jogador 1 escolhe tesoura
- 
-    alert("\nEmpate no papel, pedra ou tesoura");   
+    contador1++;
+    contador2++;
+	alert("\nEmpate no papel, pedra ou tesoura");   
 // ---> final da verificação de empate <----    
  } else if ((j1 ==="tesoura") && (j2 ==="papel")){
-    
+    contador1++;
     alert("\nJogador 1 venceu no papel, pedra ou tesoura");   // j1 vence
  } else if ((j1 ==="tesoura") && (j2 ==="pedra")){
-   
+   contador2++;
     alert("\nJogador 2 venceu no papel, pedra ou tesoura");   
  } else if ((j1 ==="pedra") && (j2 ==="papel")){
-   
+   contador2++;
     alert("\nJogador 2 venceu no papel, pedra ou tesoura");   
  } else if ((j1 ==="pedra") && (j2 ==="tesoura")){
-    
+    contador1++;
     alert("\nJogador 1 venceu no papel, pedra ou tesoura");  //j1 vence
  } else if ((j1 ==="papel") && (j2 ==="pedra")){  // jogador 1 escolhe papel
-  
+  contador1++;
     alert("\nJogador 1 venceu no papel, pedra ou tesoura");  //j1 vence 
  } else if ((j1 ==="papel") && (j2 ==="tesoura")){  // jogador 1 escolhe papel
-  
+  contador2++;
     alert("\nJogador 2 venceu no papel, pedra ou tesoura");   
  }
 }
-
 if(contador1 === contador2){
- alert ("\nResultado Final: Empate");
+alert ("\nResultado Final: Empate");
+     }else {
+			if(contador2 > contador1){
+        alert ("\nResultado Final: Jogador 2 venceu");
+    }else {
+		if(contador1  > contador2){ 
+ 			alert ("\nResultado Final: Jogador 1 venceu");
 }
-else if (contador1!==0 && contador2===0){
-alert ("\nResultado Final: Jogador 1 venceu");
 }
-else if (contador1 ===0 && contador2 !==0){
-alert ("\nResultado Final: Jogador 2 venceu");
 }
